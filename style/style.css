@@ -17,9 +17,14 @@ input[type="text"] {
   font: 16px system-ui;
 }
 
-input[type="text"], h1 {
+input[type="text"] {
   color: #f5f5f5;
   font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: #f5f5f5;
+  font-family: "Raleway", sans-serif;
 }
 
 label {
