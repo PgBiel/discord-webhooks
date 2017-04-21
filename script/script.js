@@ -14,6 +14,7 @@
       if (mode) web.text("Must be a valid webhook url.");
       return false;
     }
+    if (mode) web.text("");
     return true;
   }
   window.checkURL = function(mode) {
