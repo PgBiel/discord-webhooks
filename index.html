@@ -10,6 +10,15 @@
       <h1>Webhook sending</h1>
       <label for="weburl"><rqs title="This is required">*</rqs> Webhook URL</label>
       <input type="text" id="url" name="weburl" style="width: 20em" oninput="checkURL(true)" />
-      <small style="color: red;" id="weburlalert"></small>
+      <small style="color: red;" id="urlValidation"></small>
+      <br/></br/>
+      <div class="inlblock">
+        <label for="nick">Webhook Username</label>
+        <input type="text" id="nick" name="nick" maxlength="32"/>
+      </div>
+      <div class="inlblock" style="margin-left: 40px;">
+        <label for="avatar">Webhook Avatar URL</label>
+        <input type="text" id="avatar" name="avatar" class="inlblock" style="width: 20em;"/>
+      </div>
   </body>
 </html>

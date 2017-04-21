@@ -53,3 +53,7 @@ rqs { /* required star */
   margin: 0 auto;
   text-align: center;
 }
+
+.inlblock {
+  display: inline-block;
+}
