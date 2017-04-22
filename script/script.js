@@ -179,7 +179,7 @@
     };
     if (nick) obj.username = nick;
     if (avatar) obj.avatar_url = avatar;
-    if (embeds.length > 0 && content !== "" && content !== "\u200B") obj.content = content;
+    if (embedz.length > 0 && content !== "" && content !== "\u200B") obj.content = content;
     fetcher(url.startsWith("http") ? url : ("https://" + url), {
       method: "POST",
       headers: new Headers({"Content-Type": "application/json"}),
