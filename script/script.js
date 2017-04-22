@@ -184,7 +184,10 @@
       body: JSON.stringify(obj),
       referrerPolicy: "no-referrer"
     }).then(function(response) {
-      if (!response.ok) return alert("Discord gave status of " + response.status);
+      if (!response.ok) {
+        console.error(obj);
+        return alert("Discord gave status of " + response.status);
+      }
     });
   });
 })(window.fetch);
