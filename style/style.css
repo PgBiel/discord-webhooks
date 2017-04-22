@@ -21,7 +21,7 @@ input[type="text"], input[type="url"] {
   font-family: "Open Sans", sans-serif;
 }
 
-input[type="text"] {
+input[type="text"], input[type="url"] {
   color: #f5f5f5;
 }
 
@@ -36,7 +36,7 @@ label {
   font-size: 0.8rem;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="url"]:focus {
   border-bottom: 2px solid #7289da;
 }
 
