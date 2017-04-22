@@ -103,6 +103,7 @@
       var embedToAdd = {
         type: "rich"
       };
+      child = $(child);
       var embedNum = index + 1;
       var title = child.children('input[name="title"]').val();
       var shouldreturn = false;
