@@ -4,12 +4,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script/lodash.js"></script>
     <script src="./script/script.js"></script>
   </head>
   <body>
       <h1>Webhook sending</h1>
       <label for="weburl"><rqs title="This is required">*</rqs> Webhook URL</label>
-      <input type="text" id="url" name="weburl" style="width: 20em" oninput="checkURL(true)" />
+      <input type="text" id="url" name="weburl" style="width: 20em" />
       <small style="color: red;" id="urlValidation"></small>
       <br/></br/>
       <div class="inlblock">
