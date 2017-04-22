@@ -88,10 +88,8 @@
       "Fetch is not available for your browser. Check if you aren't using Internet Explorer or an older version of your browser."
     );
     var nick = $("#nick").val();
-    nick = nick.replace(/clyde/ig, function(text) {
-      return [text[0], "\u200B", text[1], text[2], text[3], text[4]].join("");
-    });
     if (nick.length > 32) return alert("Please ensure the webhook nickname does not have more than 32 characters.");
+    if (/clyde/i.test(nick)) return alert("Nickname cannot contain Clyde :(");
 
     var avatar = $("#avatar").val();
 
