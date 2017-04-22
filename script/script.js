@@ -3,7 +3,7 @@
     "Warning: Fetch is not available for your browser. Check if you aren't using Internet Explorer or an older version of your browser."
   );
   var urlBox = document.getElementById("url");
-  function checkURL (update) {
+  function checkURL (mode) {
     var val = urlBox.value;
     var valText = document.getElementById("urlValidation");
     var webhookRegex = /^(?:https?:\/\/)?(?:www\.)?(?:canary\.)?discordapp\.com\/api\/webhooks\/\d+\/[\w-+]+$/i;
