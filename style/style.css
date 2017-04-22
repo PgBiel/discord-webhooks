@@ -6,7 +6,7 @@ input, label {
   display: block;
 }
 
-input[type="text"] {
+input[type="text"], input[type="url"] {
   padding: 4px 8px;
   /*display: inline-block;*/
   background: none;/*hsla(0,0%,100%,.06);*/
