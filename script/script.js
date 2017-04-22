@@ -112,13 +112,13 @@
         shouldreturn = true;
       }
 
-      var author = child.children('input[name="author"]').val();
+      var author = child.children('div.inlblock:has(input[name="author"])').children('input[name="author"]').val();
       if (author.length > 256) {
         returnable += "- Please ensure the author at embed " + embedNum + " does not have more than 256 characters.\n";
         shouldreturn = true;
       }
 
-      var authorIcon = child.children('input[name="authorIcon"]').val();
+      var authorIcon = child.children('div.inlblock:has(input[name="authorIcon"])').children('input[name="authorIcon"]').val();
       var authorUrl = child.children('input[name="authorUrl"]').val();
 
       var desc = child.children('textarea[name="content"]').val();
@@ -141,12 +141,12 @@
         sidebar = parseInt(sidebar.match(/^#?([\dA-F]{6})$/i), 16);
       }
 
-      var footer = child.children('input[name="footer"]').val();
+      var footer = child.children('div.inlblock:has(input[name="footer"])').children('input[name="footer"]').val();
       if (footer.length > 256) {
         returnable += "- Please ensure the footer at embed " + embedNum + " does not have more than 256 characters.\n";
         shouldreturn = true;
       }
-      var footerIcon = child.children('input[name="footericon"]').val();
+      var footerIcon = child.children('div.inlblock:has(input[name="footericon"])').children('input[name="footericon"]').val();
 
       if (shouldreturn) return;
       if (title) embedToAdd.title = title;
