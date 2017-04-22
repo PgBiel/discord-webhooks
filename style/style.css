@@ -44,7 +44,7 @@ input:focus {
   outline: none;
 }
 
-rqs { /* required star */
+.rqs { /* required star */
   color: #f04747;
   font-family: initial;
 }
@@ -56,4 +56,8 @@ rqs { /* required star */
 
 .inlblock {
   display: inline-block;
+}
+
+.small {
+  font-size: 10px;
 }
