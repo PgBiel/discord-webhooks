@@ -58,6 +58,7 @@ input:focus {
   display: inline-block;
 }
 
-.small {
+.validation {
   font-size: 10px;
+  color: #ff0000;
 }
