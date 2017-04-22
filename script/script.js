@@ -174,12 +174,12 @@
     });
     if (returnable) return alert(returnable.replace(/\s+$/, ""));
     var obj = {
-      content,
       tts: !!tts,
       embeds: embedz
     };
     if (nick) obj.username = nick;
     if (avatar) obj.avatar_url = avatar;
+    if (embeds.length > 0 && content !== "" && content !== "\u200B") obj.content = content;
     fetcher(url.startsWith("http") ? url : ("https://" + url), {
       method: "POST",
       headers: new Headers({"Content-Type": "application/json"}),
