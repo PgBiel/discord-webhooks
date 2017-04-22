@@ -6,7 +6,12 @@ input, label {
   display: block;
 }
 
-input[type="text"], input[type="url"] {
+textarea {
+  resize: none;
+  outline: 0;
+}
+
+input[type="text"], input[type="url"], textarea {
   padding: 4px 8px;
   /*display: inline-block;*/
   background: none;/*hsla(0,0%,100%,.06);*/
@@ -21,13 +26,22 @@ input[type="text"], input[type="url"] {
   font-family: "Open Sans", sans-serif;
 }
 
-input[type="text"], input[type="url"] {
+input[type="text"], input[type="url"], textarea {
   color: #f5f5f5;
 }
 
-h1 {
+h1, h2, h4 {
   color: #f5f5f5;
   font-family: "Raleway", sans-serif;
+}
+
+span.remove {
+  color: red;
+  cursor: pointer;
+}
+
+span.remove:hover {
+  text-decoration: underline;
 }
 
 label {
@@ -36,7 +50,7 @@ label {
   font-size: 0.8rem;
 }
 
-input[type="text"]:focus, input[type="url"]:focus {
+input[type="text"]:focus, input[type="url"]:focus, textarea:focus {
   border-bottom: 2px solid #7289da;
 }
 
@@ -56,6 +70,23 @@ input:focus {
 
 .inlblock {
   display: inline-block;
+}
+
+.dbutton {
+  cursor: pointer;
+  margin-top: 16px;
+  text-align: center;
+  color: #fff;
+  width: 300px;
+  border: none;
+  background-color: #7289da;
+  padding: 10px 8px;
+  border-radius: 4px;
+}
+
+#newemb {
+  width: 100px;
+  background-color: #26D64B;
 }
 
 .validation {

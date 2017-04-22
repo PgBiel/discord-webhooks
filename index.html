@@ -6,6 +6,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./script/lodash.js"></script>
     <script defer src="./script/script.js"></script>
+    <script defer src="./script/autoExpand.js"></script>
+    <script src="https://cdn.rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
   </head>
   <body>
       <h1>Webhook sending</h1>
@@ -21,5 +23,13 @@
         <label for="avatar">Webhook Avatar URL</label>
         <input type="url" id="avatar" name="avatar" class="inlblock" style="width: 20em;"/>
       </div>
+      <br/><br/><br/>
+      <label for="text">Message Content</label>
+      <textarea class="autoExpand" id="text" name="text" data-min-rows="1" rows="1" cols="50" maxlength="2000"></textarea>
+      <div id="send" class="dbutton">Send</div>
+      <h2>Embeds</h2>
+      <div id="embeds">
+      </div>
+      <div id="newemb" class="dbutton">Add Embed</div>
   </body>
 </html>
