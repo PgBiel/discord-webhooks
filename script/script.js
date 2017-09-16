@@ -118,8 +118,8 @@
         shouldreturn = true;
       }
 
-      var authorIcon = child.children('div.inlblock:has(input[name="authorIcon"])').children('input[name="authorIcon"]').val();
-      var authorUrl = child.children('input[name="authorUrl"]').val();
+      var authorIcon = child.children('div.inlblock:has(input[name="authoricon"])').children('input[name="authoricon"]').val();
+      var authorUrl = child.children('input[name="authorurl"]').val();
 
       var desc = child.children('textarea[name="content"]').val();
       if (desc.length > 256) {
