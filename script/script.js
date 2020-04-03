@@ -138,7 +138,7 @@
         sidebar = sidebar.match(/^#?([\dA-F]{3})$/i)[1].repeat(2);
       }
       if (sidebarvalid && sidebar) {
-        sidebar = parseInt(sidebar.match(/^#?([\dA-F]{6})$/i), 16);
+        sidebar = parseInt(sidebar.match(/^#?([\dA-F]{6})$/i)[1], 16);
       }
 
       var footer = child.children('div.inlblock:has(input[name="footer"])').children('input[name="footer"]').val();
