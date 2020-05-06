@@ -11,7 +11,7 @@
   function checkURL(update = true) {
     var val = urlBox.value;
     var valText = document.getElementById("urlValidation");
-    var webhookRegex = /^(?:https?:\/\/)?(?:www\.)?(?:(?:canary|ptb)\.)?discordapp\.com\/api\/webhooks\/\d+\/[\w-+]+$/i;
+    var webhookRegex = /^(?:https?:\/\/)?(?:www\.)?(?:(?:canary|ptb)\.)?discord(?:app)?\.com\/api\/webhooks\/\d+\/[\w-+]+$/i;
     if (!val) {
       if (update) valText.innerHTML = "This is required.";
       return false;
