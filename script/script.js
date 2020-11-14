@@ -60,7 +60,7 @@
           <label for="authorurl">Author Clickable URL</label>\
           <input type="url" name="authorurl" style="width: 20em;"/>\
           <br/><br/>\
-          <label for="thumbnail">Thumbnail URLlabel>\
+          <label for="thumbnail">Thumbnail URL</label>\
           <input type="url" name="thumbnail" style="width: 20em;"/>\
           <br/><br/>\
           <label for="title">Title</label>\
