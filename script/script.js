@@ -60,6 +60,9 @@
           <label for="authorurl">Author Clickable URL</label>\
           <input type="url" name="authorurl" style="width: 20em;"/>\
           <br/><br/>\
+          <label for="thumbnail">Thumbnail URLlabel>\
+          <input type="url" name="thumbnail" style="width: 20em;"/>\
+          <br/><br/>\
           <label for="title">Title</label>\
           <input type="text" name="title" maxlength="256" style="width: 15em;"/>\
           <br/><br/>\
@@ -123,7 +126,13 @@
 
       var authorIcon = child.children('div.inlblock:has(input[name="authoricon"])').children('input[name="authoricon"]').val();
       var authorUrl = child.children('input[name="authorurl"]').val();
-
+    
+      var thumbnail = child.children('input[name="thumbnail"]').val();
+      if (thumbnail.length > 2048) {
+        returnable += "- Please ensure the thumbnail URL at embed " + embedNum + " does not have more than 2048 characters.\n";
+        shouldreturn = true;
+      }
+      
       var desc = child.children('textarea[name="content"]').val();
       if (desc.length > 2048) {
         returnable += "- Please ensure the content at embed " + embedNum + " does not have more than 2048 characters.\n";
@@ -166,6 +175,7 @@
         embedToAdd.author.icon_url = authorIcon;
       }
       if (authorUrl && embedToAdd.author) embedToAdd.author.url = authorUrl;
+      if (thumbnail) embedToAdd.thumbnail = { url: thumbnail };
       if (desc) embedToAdd.description = desc;
       if (sidebar) embedToAdd.color = sidebar;
       if (footer) embedToAdd.footer = {
