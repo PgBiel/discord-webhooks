@@ -122,7 +122,7 @@
       var authorUrl = child.children('input[name="authorurl"]').val();
 
       var desc = child.children('textarea[name="content"]').val();
-      if (desc.length > 256) {
+      if (desc.length > 2048) {
         returnable += "- Please ensure the content at embed " + embedNum + " does not have more than 2048 characters.\n";
         shouldreturn = true;
       }
