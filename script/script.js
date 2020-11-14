@@ -175,6 +175,9 @@
         if (!embedToAdd.footer) embedToAdd.footer = { text: "\u200B" };
         embedToAdd.footer.icon_url = footerIcon;
       }
+      if (image) {
+        embedToAdd.image = { url: image };
+      }
       if (
         !embedToAdd.description && !embedToAdd.footer && !embedToAdd.author && !embedToAdd.title
       ) embedToAdd.description = "\u200B";
