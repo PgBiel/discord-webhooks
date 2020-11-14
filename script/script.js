@@ -77,6 +77,9 @@
             <label for="footericon">Footer Icon URL</label>\
             <input type="url" name="footericon" class="inlblock" style="width: 20em;"/>\
           </div>\
+          <br/><br/>\
+          <label for="image">Image URL</label>\
+          <input type="text" name="image" maxlength="2048" style="width: 15em;"/>\
         </div>');
     autosize($('div[data-embed="' + nowEmbed + '"]>textarea'));
     $('div[data-embed="' + nowEmbed + '"]>h4>span.remove').on("click", removeEmb(nowEmbed));
@@ -95,7 +98,7 @@
 
     var content = $("#text").val() || "\u200B";
     if (content.length > 2000) return alert("Please ensure the message content does not have more than 2000 characters.");
-
+    
     var tts = $("#tts").is(":checked");
     var embedz = [];
     var returnable = "";
@@ -147,7 +150,12 @@
         shouldreturn = true;
       }
       var footerIcon = child.children('div.inlblock:has(input[name="footericon"])').children('input[name="footericon"]').val();
-
+      
+      var image = child.children('input[name="image"]').val();
+      if (image.length > 2048) {
+        returnable += "- Please ensure the image URL at embed " + embedNum + " does not have more than 2048 characters.\n";
+        shouldreturn = true;
+      }
       if (shouldreturn) return;
       if (title) embedToAdd.title = title;
       if (author) embedToAdd.author = {
